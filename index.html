@@ -1,24 +1,284 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Playbook — 1º Preparatoria — Misión M10 - Limitaciones de los LLMs</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
+<header>
+<h1><span class="book-icon">📋</span> <strong>Playbook Misión M10: Limitaciones de los LLMs</strong></h1>
+<div class="header-widgets">
+<div class="timer-container">
+<span id="timer">⏱️ 00:00</span>
+<button id="startStop">Start</button>
+<button id="reset">Reset</button>
+</div>
+<div class="theme-toggle">
+<i class="fas fa-sun"></i>
+<label class="switch">
+<input type="checkbox" id="theme-toggle-input">
+<span class="slider round"></span>
+</label>
+<i class="fas fa-moon"></i>
+</div>
+</div>
+</header>
+<div class="main-container">
+<aside class="activity-list">
+<h2>Actividades</h2>
+<ul>
+<li><a href="#activity-0">📝</a></li>
+<li><a href="#activity-1">1</a></li>
+<li><a href="#activity-2">2</a></li>
+<li><a href="#activity-3">3</a></li>
+<li><a href="#activity-4">4</a></li>
+<li><a href="#activity-5">5</a></li>
+</ul>
+<div class="sidebar-info">
+<p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+<p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+</div>
+</aside>
+<main class="content">
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+<button id="toggle-dialogues">Mostrar todos los diálogos</button>
+<!-- 0) De un Vistazo -->
+<section class="activity-card" id="activity-0">
+<h2 class="activity-title">📝 De un Vistazo: Misión M10 - Limitaciones de los LLMs</h2>
+<p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+<div class="overview">
+<section class="overview-block">
+<h3>Objetivos e “I Can”</h3>
+<ul>
+<li>Puedo explicar las limitaciones técnicas de los LLMs como la ventana de contexto y el conteo de tokens.</li>
+<li>Puedo optimizar prompts utilizando herramientas de meta-prompting para mejorar la eficiencia y el costo.</li>
+<li>Puedo evaluar y seleccionar modelos de IA basándome en criterios técnicos y prioridades de proyecto.</li>
+</ul>
+</section>
+<section class="overview-block">
+<h3>Secuencia y tiempos</h3>
+<ol>
+<li>Saludo Interactivo con IA — 3 min</li>
+<li>“I Can” + Desafío — 5–7 min</li>
+<li>AI GYM — 10–12 min</li>
+<li>Brain Spark — 17–20 min</li>
+<li>GNIUS STORM — 5 min</li>
+</ol>
+</section>
+<section class="overview-block">
+<h3>Entregable del Micro-Proyecto</h3>
+<ul>
+<li>Un prompt optimizado para una tarea crucial, generado con una herramienta de meta-prompting (ej. Claude).</li>
+<li>Una "Tarjeta de Puntuación de Modelo" con 3-4 criterios y sus ponderaciones para comparar modelos de IA.</li>
+</ul>
+</section>
+<section class="overview-block">
+<h3>Criterios de calidad</h3>
+<ul>
+<li>Comprensión demostrada de la relación entre ventana de contexto, tokens y costo.</li>
+<li>Eficacia del prompt optimizado para la tarea específica.</li>
+<li>Claridad y relevancia de los criterios en la Tarjeta de Puntuación de Modelo.</li>
+<li>Justificación de la selección del modelo basada en los criterios definidos.</li>
+</ul>
+</section>
+<section class="overview-block">
+<h3>Materiales y preparación</h3>
+<ul>
+<li>Proyector e internet</li>
+<li>Acceso a LLM (ej. Claude) con su "Generador de Prompts"</li>
+<li>Herramientas para crear la "Tarjeta de Puntuación de Modelo" (ej. documento de texto o hoja de cálculo)</li>
+<li>Plantilla de ejemplo de prompt optimizado y tarjeta de puntuación lista</li>
+</ul>
+</section>
+</div>
+</section>
+<!-- 1) Saludo Interactivo con IA -->
+<section class="activity-card" id="activity-1">
+<h2 class="activity-title">Saludo Interactivo con IA</h2>
+<p class="activity-purpose">Activar a Xolo con perfil e intereses; conectar con el foco de la misión.</p>
+<div class="steps">
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+<p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y el valor profesional de entender las limitaciones de los LLMs.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Equipo: hoy abordaremos un aspecto crítico de los Grandes Modelos de Lenguaje (LLMs): sus limitaciones técnicas. Comprender la ventana de contexto, los tokens y el costo asociado no es solo una cuestión técnica; es una habilidad estratégica para optimizar el rendimiento y la eficiencia de cualquier proyecto de IA. Nuestro objetivo es que puedan tomar decisiones informadas sobre cómo y cuándo usar diferentes modelos, y cómo optimizar sus interacciones con ellos.</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+<p class="step-instructions">Cada estudiante abre su chat con Xolo y envía saludo con perfil de aprendizaje e intereses + referencia a la misión.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron los criterios de hoy y sigan sus indicaciones personalizadas. Por ejemplo: "Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la Misión M10 sobre limitaciones de LLMs."</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 2) “I Can” + Desafío -->
+<section class="activity-card" id="activity-2">
+<h2 class="activity-title">“I Can Statement” + Desafío</h2>
+<p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+<div class="steps">
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 1 — Presenta el reto</h3>
+<p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable, derivado de la Columna 1 y 3.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">El reto de hoy es navegar las limitaciones inherentes a los LLMs para tomar decisiones de diseño de prompts y selección de modelos más eficientes. No basta con saber usar un LLM; es crucial entender sus límites técnicos para optimizar su rendimiento y costo. Evaluaremos su capacidad para optimizar un prompt y justificar la elección de un modelo basándose en criterios técnicos.</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+<p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1–2 “I Can” concretos alineados al entregable de la Columna 2.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Formula tu "Puedo…" en 1 o 2 frases. Piensen en cómo esta misión les permitirá mejorar sus interacciones con la IA. Por ejemplo: "Puedo optimizar un prompt para reducir su consumo de tokens, manteniendo la calidad de la respuesta" o "Puedo crear una tarjeta de puntuación para comparar modelos de IA según la ventana de contexto y el costo."</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 3) AI GYM -->
+<section class="activity-card" id="activity-3">
+<h2 class="activity-title">AI GYM</h2>
+<p class="activity-purpose">Formalizar el marco/técnica de IA de la sesión.</p>
+<div class="steps">
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 1 — Marco del día: Ventana de Contexto, Tokens y Eficiencia</h3>
+<p class="step-instructions">Proyectar Diapositiva 5. Introduce los conceptos de Ventana de Contexto, Tokens y Eficiencia de Prompts. Explica el uso del "Generador de Prompts" como herramienta de meta-prompting.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Hoy nos enfocamos en la arquitectura interna de los LLMs: la ventana de contexto y los tokens. Comprender estos conceptos es crucial porque impactan directamente el costo, la velocidad y la capacidad de un modelo para procesar información. Un error común es ignorar estas limitaciones, lo que lleva a prompts ineficientes o a la incapacidad del modelo de procesar tareas complejas. Usaremos una herramienta como el 'Generador de Prompts' de Claude para ver cómo el meta-prompting puede optimizar sus instrucciones, haciéndolas más concisas y efectivas sin perder información.</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 2 — Mini-demostración: Optimización de Prompts con Meta-Prompting</h3>
+<p class="step-instructions">Proyectar Diapositiva 6. Construye en vivo un ejemplo mínimo de cómo un prompt simple puede ser optimizado usando un "Generador de Prompts" (ej. en Claude), resaltando la reducción de tokens o la mejora de la claridad.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Observen cómo una instrucción inicial, que podría ser vaga o redundante, se transforma en un prompt altamente eficiente. Por ejemplo, si nuestro prompt original es: "Dame ideas para un proyecto de ciencia sobre el cambio climático", al pasarlo por el generador, podría convertirse en: "Genera 3 ideas de proyectos de ciencia innovadores sobre mitigación del cambio climático, enfocándose en soluciones de energía renovable, con un enfoque para estudiantes de preparatoria." ¿Notan cómo se especifica la cantidad, el enfoque y la audiencia? Esto no solo reduce tokens, sino que mejora la calidad de la respuesta. Verifiquen: ¿El prompt optimizado es más claro? ¿Es más conciso?</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 3 — Check rápido</h3>
+<p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves sobre ventana de contexto y tokens.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Pregunta 1: Si un modelo tiene una ventana de contexto de 100k tokens, ¿significa que puede procesar un texto de cualquier longitud? Pregunta 2: ¿Por qué es importante que un prompt sea eficiente en el uso de tokens, más allá del costo directo?</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 4) Brain Spark -->
+<section class="activity-card" id="activity-4">
+<h2 class="activity-title">Brain Spark</h2>
+<p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+<div class="steps">
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 1 — Producción: Prompt Optimizado y Tarjeta de Puntuación</h3>
+<p class="step-instructions">Proyectar Diapositiva 8. Los estudiantes usarán el artefacto de Claude para generar un prompt optimizado para una tarea crucial de su elección. Paralelamente, comenzarán a crear su "Tarjeta de Puntuación de Modelo" con 3-4 criterios y sus ponderaciones.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">N/A</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 2 — Iteración: Refinamiento y Justificación</h3>
+<p class="step-instructions">Proyectar Diapositiva 9. Refinen el prompt optimizado basándose en los principios de eficiencia aprendidos. Ajusten los criterios y ponderaciones de su Tarjeta de Puntuación de Modelo, justificando su elección.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Antes de cerrar: valida que tu prompt optimizado sea conciso y completo. Si no lo es, ajusta y vuelve a probar con el generador. Para la Tarjeta de Puntuación: ¿Son tus criterios medibles y relevantes para un escenario real? ¿Cómo justificarías las ponderaciones asignadas a cada criterio?</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 3 — Evidencia de Resultado</h3>
+<p class="step-instructions">Proyectar Diapositiva 10. Solicita comprobantes: captura del prompt optimizado (si es posible con el generador) y el documento de la "Tarjeta de Puntuación de Modelo".</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Sube la evidencia de tu prompt optimizado y tu Tarjeta de Puntuación de Modelo al canal indicado. Nombra tus archivos: M10_Prompt_[TuNombre] y M10_Scorecard_[TuNombre].</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- 5) GNIUS STORM -->
+<section class="activity-card" id="activity-5">
+<h2 class="activity-title">GNIUS STORM</h2>
+<p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
+<div class="steps">
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+<p class="step-instructions">2–3 equipos/personas muestran evidencia clave de su prompt optimizado o la lógica de su tarjeta de puntuación (30–45 s c/u).</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Describe tu resultado en 30 segundos: ¿Cuál fue la mejora clave en tu prompt optimizado? O, ¿cuál es el criterio más importante en tu tarjeta de puntuación y por qué?</p>
+</div>
+</div>
+</article>
+<article class="step-card">
+<div class="step-content">
+<h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+<p class="step-instructions">Proyectar Diapositiva 11. Entrega síntesis: 1 aprendizaje clave + 1 criterio de calidad que marcó la diferencia + siguiente paso aplicable fuera del aula.</p>
+</div>
+<div class="collapsible">
+<button type="button" class="collapsible-button">Diálogo Sugerido</button>
+<div class="collapsible-content">
+<p class="dialogue assistant">Síntesis: Hoy aprendimos que la eficiencia en la interacción con LLMs no es solo sobre qué preguntar, sino cómo preguntar y qué modelo elegir. Un aprendizaje clave es que la comprensión de las limitaciones técnicas como la ventana de contexto y los tokens es fundamental para el diseño de prompts y la selección de modelos. El criterio de calidad que marcó la diferencia fue la capacidad de justificar nuestras decisiones de diseño de prompts y selección de modelos con base en datos técnicos y prioridades de proyecto. El siguiente paso aplicable fuera del aula es que, al enfrentar cualquier tarea con un LLM, consideren activamente las limitaciones del modelo y cómo pueden optimizar su prompt para una mayor eficiencia y un mejor rendimiento, aplicando el pensamiento estratégico de un arquitecto de IA.</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
 </body>
-
 </html>
