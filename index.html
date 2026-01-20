@@ -1,284 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Playbook — 1º Preparatoria — Misión M10 - Limitaciones de los LLMs</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-H1-TM10</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1><span class="book-icon">📋</span> <strong>Playbook Misión M10: Limitaciones de los LLMs</strong></h1>
-<div class="header-widgets">
-<div class="timer-container">
-<span id="timer">⏱️ 00:00</span>
-<button id="startStop">Start</button>
-<button id="reset">Reset</button>
-</div>
-<div class="theme-toggle">
-<i class="fas fa-sun"></i>
-<label class="switch">
-<input type="checkbox" id="theme-toggle-input">
-<span class="slider round"></span>
-</label>
-<i class="fas fa-moon"></i>
-</div>
-</div>
-</header>
-<div class="main-container">
-<aside class="activity-list">
-<h2>Actividades</h2>
-<ul>
-<li><a href="#activity-0">📝</a></li>
-<li><a href="#activity-1">1</a></li>
-<li><a href="#activity-2">2</a></li>
-<li><a href="#activity-3">3</a></li>
-<li><a href="#activity-4">4</a></li>
-<li><a href="#activity-5">5</a></li>
-</ul>
-<div class="sidebar-info">
-<p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-<p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-</div>
-</aside>
-<main class="content">
-<div class="progress-bar">
-<div class="progress"></div>
-</div>
-<button id="toggle-dialogues">Mostrar todos los diálogos</button>
-<!-- 0) De un Vistazo -->
-<section class="activity-card" id="activity-0">
-<h2 class="activity-title">📝 De un Vistazo: Misión M10 - Limitaciones de los LLMs</h2>
-<p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-<div class="overview">
-<section class="overview-block">
-<h3>Objetivos e “I Can”</h3>
-<ul>
-<li>Puedo explicar las limitaciones técnicas de los LLMs como la ventana de contexto y el conteo de tokens.</li>
-<li>Puedo optimizar prompts utilizando herramientas de meta-prompting para mejorar la eficiencia y el costo.</li>
-<li>Puedo evaluar y seleccionar modelos de IA basándome en criterios técnicos y prioridades de proyecto.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Secuencia y tiempos</h3>
-<ol>
-<li>Saludo Interactivo con IA — 3 min</li>
-<li>“I Can” + Desafío — 5–7 min</li>
-<li>AI GYM — 10–12 min</li>
-<li>Brain Spark — 17–20 min</li>
-<li>GNIUS STORM — 5 min</li>
-</ol>
-</section>
-<section class="overview-block">
-<h3>Entregable del Micro-Proyecto</h3>
-<ul>
-<li>Un prompt optimizado para una tarea crucial, generado con una herramienta de meta-prompting (ej. Claude).</li>
-<li>Una "Tarjeta de Puntuación de Modelo" con 3-4 criterios y sus ponderaciones para comparar modelos de IA.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Criterios de calidad</h3>
-<ul>
-<li>Comprensión demostrada de la relación entre ventana de contexto, tokens y costo.</li>
-<li>Eficacia del prompt optimizado para la tarea específica.</li>
-<li>Claridad y relevancia de los criterios en la Tarjeta de Puntuación de Modelo.</li>
-<li>Justificación de la selección del modelo basada en los criterios definidos.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Materiales y preparación</h3>
-<ul>
-<li>Proyector e internet</li>
-<li>Acceso a LLM (ej. Claude) con su "Generador de Prompts"</li>
-<li>Herramientas para crear la "Tarjeta de Puntuación de Modelo" (ej. documento de texto o hoja de cálculo)</li>
-<li>Plantilla de ejemplo de prompt optimizado y tarjeta de puntuación lista</li>
-</ul>
-</section>
-</div>
-</section>
-<!-- 1) Saludo Interactivo con IA -->
-<section class="activity-card" id="activity-1">
-<h2 class="activity-title">Saludo Interactivo con IA</h2>
-<p class="activity-purpose">Activar a Xolo con perfil e intereses; conectar con el foco de la misión.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-<p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema y el valor profesional de entender las limitaciones de los LLMs.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Equipo: hoy abordaremos un aspecto crítico de los Grandes Modelos de Lenguaje (LLMs): sus limitaciones técnicas. Comprender la ventana de contexto, los tokens y el costo asociado no es solo una cuestión técnica; es una habilidad estratégica para optimizar el rendimiento y la eficiencia de cualquier proyecto de IA. Nuestro objetivo es que puedan tomar decisiones informadas sobre cómo y cuándo usar diferentes modelos, y cómo optimizar sus interacciones con ellos.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-<p class="step-instructions">Cada estudiante abre su chat con Xolo y envía saludo con perfil de aprendizaje e intereses + referencia a la misión.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron los criterios de hoy y sigan sus indicaciones personalizadas. Por ejemplo: "Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Estoy en la Misión M10 sobre limitaciones de LLMs."</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 2) “I Can” + Desafío -->
-<section class="activity-card" id="activity-2">
-<h2 class="activity-title">“I Can Statement” + Desafío</h2>
-<p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Presenta el reto</h3>
-<p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable, derivado de la Columna 1 y 3.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">El reto de hoy es navegar las limitaciones inherentes a los LLMs para tomar decisiones de diseño de prompts y selección de modelos más eficientes. No basta con saber usar un LLM; es crucial entender sus límites técnicos para optimizar su rendimiento y costo. Evaluaremos su capacidad para optimizar un prompt y justificar la elección de un modelo basándose en criterios técnicos.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-<p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1–2 “I Can” concretos alineados al entregable de la Columna 2.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Formula tu "Puedo…" en 1 o 2 frases. Piensen en cómo esta misión les permitirá mejorar sus interacciones con la IA. Por ejemplo: "Puedo optimizar un prompt para reducir su consumo de tokens, manteniendo la calidad de la respuesta" o "Puedo crear una tarjeta de puntuación para comparar modelos de IA según la ventana de contexto y el costo."</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 3) AI GYM -->
-<section class="activity-card" id="activity-3">
-<h2 class="activity-title">AI GYM</h2>
-<p class="activity-purpose">Formalizar el marco/técnica de IA de la sesión.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Marco del día: Ventana de Contexto, Tokens y Eficiencia</h3>
-<p class="step-instructions">Proyectar Diapositiva 5. Introduce los conceptos de Ventana de Contexto, Tokens y Eficiencia de Prompts. Explica el uso del "Generador de Prompts" como herramienta de meta-prompting.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Hoy nos enfocamos en la arquitectura interna de los LLMs: la ventana de contexto y los tokens. Comprender estos conceptos es crucial porque impactan directamente el costo, la velocidad y la capacidad de un modelo para procesar información. Un error común es ignorar estas limitaciones, lo que lleva a prompts ineficientes o a la incapacidad del modelo de procesar tareas complejas. Usaremos una herramienta como el 'Generador de Prompts' de Claude para ver cómo el meta-prompting puede optimizar sus instrucciones, haciéndolas más concisas y efectivas sin perder información.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Mini-demostración: Optimización de Prompts con Meta-Prompting</h3>
-<p class="step-instructions">Proyectar Diapositiva 6. Construye en vivo un ejemplo mínimo de cómo un prompt simple puede ser optimizado usando un "Generador de Prompts" (ej. en Claude), resaltando la reducción de tokens o la mejora de la claridad.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Observen cómo una instrucción inicial, que podría ser vaga o redundante, se transforma en un prompt altamente eficiente. Por ejemplo, si nuestro prompt original es: "Dame ideas para un proyecto de ciencia sobre el cambio climático", al pasarlo por el generador, podría convertirse en: "Genera 3 ideas de proyectos de ciencia innovadores sobre mitigación del cambio climático, enfocándose en soluciones de energía renovable, con un enfoque para estudiantes de preparatoria." ¿Notan cómo se especifica la cantidad, el enfoque y la audiencia? Esto no solo reduce tokens, sino que mejora la calidad de la respuesta. Verifiquen: ¿El prompt optimizado es más claro? ¿Es más conciso?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Check rápido</h3>
-<p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves sobre ventana de contexto y tokens.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Pregunta 1: Si un modelo tiene una ventana de contexto de 100k tokens, ¿significa que puede procesar un texto de cualquier longitud? Pregunta 2: ¿Por qué es importante que un prompt sea eficiente en el uso de tokens, más allá del costo directo?</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 4) Brain Spark -->
-<section class="activity-card" id="activity-4">
-<h2 class="activity-title">Brain Spark</h2>
-<p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Producción: Prompt Optimizado y Tarjeta de Puntuación</h3>
-<p class="step-instructions">Proyectar Diapositiva 8. Los estudiantes usarán el artefacto de Claude para generar un prompt optimizado para una tarea crucial de su elección. Paralelamente, comenzarán a crear su "Tarjeta de Puntuación de Modelo" con 3-4 criterios y sus ponderaciones.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">N/A</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Iteración: Refinamiento y Justificación</h3>
-<p class="step-instructions">Proyectar Diapositiva 9. Refinen el prompt optimizado basándose en los principios de eficiencia aprendidos. Ajusten los criterios y ponderaciones de su Tarjeta de Puntuación de Modelo, justificando su elección.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Antes de cerrar: valida que tu prompt optimizado sea conciso y completo. Si no lo es, ajusta y vuelve a probar con el generador. Para la Tarjeta de Puntuación: ¿Son tus criterios medibles y relevantes para un escenario real? ¿Cómo justificarías las ponderaciones asignadas a cada criterio?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Evidencia de Resultado</h3>
-<p class="step-instructions">Proyectar Diapositiva 10. Solicita comprobantes: captura del prompt optimizado (si es posible con el generador) y el documento de la "Tarjeta de Puntuación de Modelo".</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Sube la evidencia de tu prompt optimizado y tu Tarjeta de Puntuación de Modelo al canal indicado. Nombra tus archivos: M10_Prompt_[TuNombre] y M10_Scorecard_[TuNombre].</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<!-- 5) GNIUS STORM -->
-<section class="activity-card" id="activity-5">
-<h2 class="activity-title">GNIUS STORM</h2>
-<p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-<p class="step-instructions">2–3 equipos/personas muestran evidencia clave de su prompt optimizado o la lógica de su tarjeta de puntuación (30–45 s c/u).</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Describe tu resultado en 30 segundos: ¿Cuál fue la mejora clave en tu prompt optimizado? O, ¿cuál es el criterio más importante en tu tarjeta de puntuación y por qué?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-<p class="step-instructions">Proyectar Diapositiva 11. Entrega síntesis: 1 aprendizaje clave + 1 criterio de calidad que marcó la diferencia + siguiente paso aplicable fuera del aula.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Síntesis: Hoy aprendimos que la eficiencia en la interacción con LLMs no es solo sobre qué preguntar, sino cómo preguntar y qué modelo elegir. Un aprendizaje clave es que la comprensión de las limitaciones técnicas como la ventana de contexto y los tokens es fundamental para el diseño de prompts y la selección de modelos. El criterio de calidad que marcó la diferencia fue la capacidad de justificar nuestras decisiones de diseño de prompts y selección de modelos con base en datos técnicos y prioridades de proyecto. El siguiente paso aplicable fuera del aula es que, al enfrentar cualquier tarea con un LLM, consideren activamente las limitaciones del modelo y cómo pueden optimizar su prompt para una mayor eficiencia y un mejor rendimiento, aplicando el pensamiento estratégico de un arquitecto de IA.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-</main>
-</div>
-<script src="script.js"></script>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 10 - 1o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar ChatGPT, Gemini y Claude para diseñar scorecards y prompts optimizados para comparar el desempeño de modelos de IA y comprender la importancia de la eficiencia, el uso responsable de recursos y el pensamiento basado en criterios.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame qué son tokens y ventana de contexto y cómo impactan costo y resultados. Analicemos por qué “el mejor modelo” depende de prioridades y criterios, no solo de fama. Guíame a construir una Tarjeta de Puntuación con 3–4 criterios (y ponderación) y a entender el meta-prompting como estrategia para escribir prompts mejores (simple vs experto vs paso a paso).</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Eficiencia y Estrategia en IA: Es saber elegir la herramienta adecuada para cada tarea, considerando no solo la fama del modelo, sino cuánto cuesta (tokens) y qué tan bien entiende instrucciones complejas (ventana de contexto).</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Crear una Tarjeta de Puntuación (Scorecard) para evaluar y comparar cómo responden diferentes IAs.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes niveles de complejidad en los prompts (simple vs. experto) para entender cómo cambia la calidad de la respuesta según el modelo.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Dispositivo con conexión a internet (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a ChatGPT (https://chatgpt.com/)</label><br><label><input type="checkbox"> Acceso a Gemini (https://gemini.google.com/)</label><br><label><input type="checkbox"> Acceso a Claude (https://claude.ai/)</label>
+                        <label><input type="checkbox"> Cuaderno o documento digital para registro de decisiones</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa prompts avanzados y comparación de modelos de lenguaje (LLMs)</label>
+                        <label><input type="checkbox"> 📋 Tip: Ten abiertas las tres plataformas de IA en pestañas diferentes para comparar rápido.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener la concentración en las pestañas de trabajo, cerrar aplicaciones innecesarias y gestionar las cuentas de IA con responsabilidad.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre tokens, ventana de contexto y meta-prompting (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si una plataforma de IA está caída:</strong> Utiliza una de las alternativas (ChatGPT, Gemini o Claude) y pide a XOLO que ajuste la comparación.</li><li><strong>Si el prompt genera respuestas muy largas:</strong> Ajusta el criterio de 'concisión' en tu scorecard y pide a XOLO que te ayude a limitar la ventana de contexto.</li><li><strong>Si hay errores en el código o lógica:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy se convertirán en Estrategas de IA, aprendiendo a elegir la mejor mente digital para cada desafío.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Estrategia y Eficiencia con Modelos de IA.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A diseñar sistemas de evaluación para que sus proyectos con IA sean ultra eficientes y profesionales.</p>
+                        <p><strong>Aplicación real:</strong> Los arquitectos de soluciones de IA en empresas tecnológicas usan estas comparativas para ahorrar recursos y elegir el modelo más preciso para tareas críticas.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo los tokens y la ventana de contexto afectan el costo y la calidad de las respuestas.</li>
+                            <li>Introduce el concepto de meta-prompting y cómo crear una tarjeta de puntuación (scorecard).</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar diferentes modelos de IA para comparar su eficiencia.</li>
+                            <li>Aprender sobre tokens, ventana de contexto y criterios de evaluación.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Entender los fierros de la IA (tokens y contexto) para ser un usuario estratégico.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar un paso gigante. No solo usaremos la IA, aprenderemos a dominarla estratégicamente. Abran su chat con XOLO y denle un saludo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre tokens, ventanas de contexto y por qué no siempre el modelo más famoso es el mejor. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Él les explicará cómo las empresas deciden qué IA usar. Pregúntenle todo lo que no entiendan sobre cómo se mide el éxito de un prompt.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Plataformas de IA conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique estrategias de eficiencia y meta-prompting.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para optimizar tareas usando diferentes modelos de IA.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Comparar los resultados en ChatGPT, Gemini y Claude y registrar los hallazgos.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a actuar como Estratega de Eficiencia en IA: define una tarea crucial y acompáñame a generar un prompt optimizado (simple/experto/paso a paso). Luego guíame a crear mi scorecard de modelos y a comparar cuál versión del prompt rinde mejor según mis criterios. Ejecuta: entrega mi scorecard final + el prompt optimizado elegido + una mini-justificación de por qué es “superior” para mi objetivo."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El modelo que elegiste inicialmente fue realmente el que mejor puntuación obtuvo en tu scorecard?</li>
+                            <li>¿Qué pasa si intentas el mismo prompt optimizado en un modelo gratuito vs uno de pago?</li>
+                            <li>¿Funciona igual un prompt 'paso a paso' en Claude que en ChatGPT?</li>
+                            <li>¿Cómo influye el uso de criterios y ponderaciones en tu confianza al elegir una IA para una tarea importante?</li>
+                            <li>¿De qué manera el entender los tokens te ayuda a ser más responsable con el uso de recursos digitales?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear su propio sistema de evaluación! Vamos a pasar de la teoría a la acción. El flujo es simple: ideen con XOLO una tarea difícil, creen un VIBE, generen su GCS de prompt optimizado y luego pónganlo a prueba en el mundo real usando ChatGPT, Gemini y Claude. Por ejemplo, podrían diseñar un asistente que resuma contratos legales o un tutor de física cuántica. Usen su scorecard para ver quién gana. Si tienen errores o dudas sobre cómo mejorar el prompt, pregúntenle a XOLO, él los ayudará a depurar la lógica de sus instrucciones. ¡Abran sus pestañas y que comience el duelo de IAs!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con mi scorecard básico. ¿Puedes enseñarme cómo hacer que mi prompt incluya una técnica de 'Chain of Thought' avanzada para mejorar aún más la precisión?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué criterios de su scorecard funcionaron mejor para diferenciar a los modelos.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué criterios de evaluación revelaron las diferencias más grandes entre las IAs que probaste?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi scorecard evaluó precisión y tono. Me sorprendió que [Modelo X] fue mucho mejor en [Criterio Y] a pesar de ser menos conocido."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
